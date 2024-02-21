@@ -65,9 +65,10 @@ The root directory is similar to the trunk of a tree, as the starting point wher
 
 Inside this root directory will be our GitHub.
 
-Inside our GitHub directory we'll have one more folder i.e, Workflow folder.
+	Inside our GitHub directory we'll have one more folder i.e, Workflow folder.
 
-Inside the Workflow folder we'll have our yaml file.
+		Inside the Workflow folder we'll have our yaml file.
+
 
 If we want to perform CI/CD i.e, Continuous Integration and Continuous Deployment, we need to have a GitHub folder in our project directory.
 
@@ -91,4 +92,138 @@ If we want to pass a function with no functionality we'll do this:
 def xyz:
 	pass
 
-Similarly, if we want to push and empty folder(with no file or anything inside) on our GitHub repository 
+Similarly, if we want to push an empty folder(with no file or anything inside) on our GitHub repository the way to do it is to keep it inside a 
+.gitkeep file. 
+
+Here's the ChatGPT definition of .gitkeep:
+
+The .gitkeep file is used in Git repositories to maintain empty directories. Git doesn't track empty directories by default, so if you want to include an empty directory in your repository, you need to place a file inside it. Conventionally, people use .gitkeep as a placeholder file within these directories to signal Git to keep the directory even if it's empty. This is especially useful for project organization and ensuring that directory structures are maintained even if they don't contain any files at the moment.
+
+
+Now lets get started with the file structure:
+
+Initially we don't know about our CI/CD script like where we will be deploying our application or what kind of CI/CD script we have to write. 
+
+	So, initially we'll keep .gitkeep file inside our workflow folder.
+
+Now along with that we'll create our Notebook folder in our root directory, inside this Notebook folder we'll create our research.ipynb file.
+
+	Inside the research.ipynb file we'll have EDA and other basic preprocessing steps.
+
+
+Apart from this we'll be having one more folder in or Github repository i.e, src folder.
+
+	Insisde this src folder, we'll create whatever project we have to create and name it appropriately also for e.g, Diamond Price Prediction.
+
+	In this project we'll predict the price of diamonds based on different parameters.
+
+		Now, inside the Diamond Price Prediction folder we'll have more folders based on functionality like:
+
+			1. Components 
+
+			Inside components, we'll be having a few more files:
+	
+				1. Data Ingestion.py 
+				2. Pre-processing file
+				3. Model Training file
+ 
+
+			2. Pipeline Folder 
+			
+			Inside this folder will be our files related to pipeline:
+
+				1. training.py
+				2. prediction.py
+
+			3. Exceptions.py
+
+			4. Logger.py
+
+			5. Utils.py(utility file)
+
+
+Now, in the root directory we'll be having some more files:
+
+1. requirements.txt
+
+2. setup.py
+
+This is the complete project structure which we'll be using. 
+
+
+
+Q. Why does GitBash use Forward slash(/) whereas Command prompt uses Backward slash(\) ?
+
+Answer
+
+
+The difference in the use of forward slash (/) and backward slash () as directory separators in Git Bash and Command Prompt primarily arises from the historical conventions of their respective operating systems.
+
+Git Bash: Git Bash is typically used on Unix-like operating systems (such as Linux and macOS) or as part of Git for Windows, which emulates Unix-like behavior. In Unix-like systems, the forward slash (/) is used as the directory separator in file paths.
+
+Command Prompt (Windows): Command Prompt, on the other hand, is the command-line interpreter for Windows operating systems. In Windows, the convention is to use the backward slash () as the directory separator in file paths.
+
+These conventions stem from the historical development of each operating system and the different standards they adopted. However, both Git Bash and Command Prompt generally support using either forward slashes or backward slashes interchangeably for specifying file paths, so you can often use either style in both environments without issues.
+
+
+Now lets focus on some more of the basics now that our basic code has been executed and pushed into our GitHub repository.
+
+As we can see in our End-to-End-Project-Intro in our GitHub repository that we've created an __init__.py file inside every folder.
+
+Lets go in detail and find out why we use this __init__.py file.
+
+The .py file is called a module.
+
+Lets look at the hierarchy in the folder:
+
+(Folder)--
+	(File/module/.py) 
+
+Now this complete Folder inside which includes the File/module/.py is called the package.
+
+Now the question arises what is a package ? 
+
+For instance, Pandas, Numpy, sklearn, Tensorflow, etc are all also packages. Meaning we have a folder in which we're writing a code in .py file 
+and inside it will be class/def function etc. Lets look at an example
+
+
+Folder(Tensorflow)--
+	.py(tensor.py)--
+		class(mytensor)
+
+
+Now if we want to import this class 'mytensor' we'll do it this way:
+
+from tensorflow.tensor import mytensor 
+
+Here, tenserflow is the module(which is our folder); tensor is the module name(which is our file); mytensor is the class name.
+
+Lets look at one more example:
+
+from sklearn.linear_model import LinearRegression
+
+Here, sklearn is the module, linear_model is the file and LinearRegression is the class name.
+
+This complete one line of code above that I just explained is called a package. 
+
+
+Now there are in-built packages in python like pandas, numpy, etc but lets assume I want to create/establish my own package inside a folder that I have created. 
+
+In order to make/transform the folder we've created into a local/custom package just like many in-built packages of python like numpy, pandas, etc.
+We have to create __init__.py file inside our folder in order to transform our folder into a package.
+
+Now that I have created my own custom/local package, how can I install this package ? 
+
+Answer There are three ways:
+
+1. pip install .
+
+2. If we want to install it through requirements.txt then we'll do: -e .
+
+3. We can use setup.py file and we can install our local package from setup.py file also i.e, if we run the following:
+	python setup.py install 
+By also running the above command we can install our local command inside our local environment.
+
+
+
+

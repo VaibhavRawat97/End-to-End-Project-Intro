@@ -1,0 +1,94 @@
+GitBash is used for Linux command and Command Prompt is used for Windows commands.
+If you're not familiar with Linux command, use GitBash otherwise use Command prompt.
+
+Lets start step by step:
+
+1. First initialize the git (init) by giving the following command on GitBash - git init
+
+Note:
+
+VS Code gives us the option to publish the repository from VS Code itself
+
+In order to fetch all the changes made directly in and through the GitHub Repository into VS Code, go to the GitBash Terminal and give the following command:
+git pull
+
+.sh is a shell script file format more on that later.
+
+Now lets talk in detail abourt folder structure/project structure:
+
+The Project structure that we'll discuss can be used everywhere whether its DL or ML.
+When we implement a ML project, there are certain chronological steps involved. 
+
+1. Data Ingestion
+2. EDA
+3. Feature Engineering
+4. Model Building
+5. Evaluation
+
+A Pipeline is where we keep all the above 5 components to function together chronologically.
+
+Now, there are two types of pipelines:
+
+1. Training pipeline 
+2. Testing/Prediction pipeline
+
+All the above comprise of our Project Structure, apart from these there are other technical aspects also that will a part of the 
+infrastructure of the project which we will discuss below:
+
+1. Logger file - We use it to logging the information/metadata regarding the project(this is present in pretty much every project) 
+
+2. Exception file - This is not a compulsory file(not necessary to write it) it depends on how we'll design our infrastructure and our project.
+
+Note:
+
+Whatever project/folder structure that we'll design will be a 'Modular Design'. What does Modularity mean ? 
+Modularity means we'll create a separate module for each and every task i.e, we'll use a resuabe code and a reusable infrastructure.
+Lets say our project is complex or there are several dependencies in our project, we'll segregate these dependencies so that the chances of our 
+code stopping in the middle of its exection is minimum. 
+
+So in essence if we create a modular structure, we can handle complex situations also as our projects becomes bigger and more complex.
+
+3. Utils file - This is a utility file (for utility function) incase we want to load, save something or incase we want to read any file or save any file.
+Utils file is like a helper in projects, whatever utility code is there, we can write it inside this file.
+
+4. Setup.py file - This file is used to install the local packages.
+
+5. requirements.txt 
+
+
+                                              Project Structure(basic intro)
+
+
+The first thing in our project structure will be our root directory. A root directory is the top-level directory in a file system. It's the starting point for organizing all files and folders on a computer.
+
+The root directory is similar to the trunk of a tree, as the starting point where all branches originate from. All other folders grow outwards from the root directory. This structure makes finding files easier than having all files stored in the one directory.
+
+Inside this root directory will be our GitHub.
+
+Inside our GitHub directory we'll have one more folder i.e, Workflow folder.
+
+Inside the Workflow folder we'll have our yaml file.
+
+If we want to perform CI/CD i.e, Continuous Integration and Continuous Deployment, we need to have a GitHub folder in our project directory.
+
+yaml file is used for writing the script/configuration, this script will be available in key:value format(similar to json) 
+
+Now, we have another file by the name of '.gitkeep' file which will be explained in detail below.
+
+Lets say we're doing development at our local system and we've created one folder and we've pushed this folder from our local to GitHub. 
+
+This folder won't be visible inside our GitHub because we can't push an empty folder inside our GitHub.
+
+Lets try to explain this with an example. 
+
+Lets say we write a function:
+
+def xyz:
+
+If we execute the above line of code, error will be generated. In order to avoid this, python has given us a keyword. 
+If we want to pass a function with no functionality we'll do this:
+
+def xyz:
+	pass
+
+Similarly, if we want to push and empty folder(with no file or anything inside) on our GitHub repository 

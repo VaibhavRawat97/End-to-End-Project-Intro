@@ -225,5 +225,47 @@ Answer There are three ways:
 By also running the above command we can install our local command inside our local environment.
 
 
+Now lets take a step back and make our horizon wider...
+
+Q. Why should we want to install a local package ? (if we wanted/needed to)
+
+Ans
+
+Firstly, whenever we want to write the 'import' statement, it gives an issue/error, in order to resolve the issue we install the local package.
+
+Secondly, if we want to publish this package. 
+
+For instance if we're doing development in Java we'll go through the following steps:
+
+First we always create a 'jar' file if we're writing a code in Java or even Hadoop.
+Now in the development,
+	First step - development
+	Second step - testing
+	Third step - Q/A
+	Fourth step - Delivery
+	Fifth step - Deployment
+	Sixth step - Monitoring
+	Seventh step - Maintenance
+	
+From the First to Seventh step is called a 'Complete DevOps Pipeline'.
+
+Here, First to Third steps are called 'Development'
+
+And Fourth to Seventh steps are called 'Operations'
+
+
+So, whenever we're doing development in Python we always pass our code in testing in terms of packages.
+
+Whereas in Java we always pass the code in terms of jar file.
+
+
+
+
+
+
+
+
+
+
 
 

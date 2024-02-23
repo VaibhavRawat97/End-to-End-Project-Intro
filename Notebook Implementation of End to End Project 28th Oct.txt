@@ -1,0 +1,33 @@
+Today, first we'll try to code the problem statement inside our research.ipynb file and then in the next class
+we'll try to convert that code into a modular code.
+
+Q. How can we create the HLD(High Level Document) and LLD(Low Level Document) ? 
+
+To be Answered later... moving on...
+
+So, as we can see inside our project template that we previously created i.e, src\DimondPricePrediction there are various components like:
+
+data_ingestion.py, data_transformation.py, model_trainer.py
+
+Today lets first focus on data ingestion.
+
+Lets say we're working in the industry, there might be a different pipeline for getting the data, lets say our client has given us the 
+access to the database.
+
+From that database we have to read the data(maybe even from our remote location).
+
+It might be SQL or No-SQL database or lets say that the data is available cloud or S3 or Asure Blobs, etc. From wherever we'll have to read the data.
+
+In real-time we'll have to face different situations while performing data ingestion.
+
+So, we'll have to take help of Data Engineer(DE) as well, DE's perform ETL operations/pipeline.
+
+Meaning they extract the data, transform it and then they load the data in a particular database/location for further use.
+
+Here, we don't have any client/customer or developer so we can simulate the scenario instead by keeping the data inside a database like 
+Cassandra, MongoDB, MySQL Database and from there we can read it. In this way we can create our own pipeline.
+
+But as of now we're just keeping it simple.
+
+Now that we have the data, we'll perform EDA.
+

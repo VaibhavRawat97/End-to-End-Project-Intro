@@ -31,3 +31,5 @@ But as of now we're just keeping it simple.
 
 Now that we have the data, we'll perform EDA.
 
+Feature Engineering has also been done along with Model Training.
+

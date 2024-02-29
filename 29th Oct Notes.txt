@@ -1,0 +1,75 @@
+Today's topic: Components and Pipeline Implementation
+
+Yesterday we've completed model_training.ipynb file.
+
+Today, we'll try to do Modular coding, we'll see how we can convert that Jupyter notebook into modular coding i.e, how we can represent that Jupyter notebook in a modular style/way.
+
+So far we've kept out EDA.ipynb and model_training.ipynb files inside the 'notebooks' folder.
+
+Now, we'll see how to keep this model_training.ipynb in our pipeline(src folder).
+Inside the src folder there are furthermore folders like components, pipeline, etc.
+Inside components we have:
+	data_ingestion.py
+	data_transformation.py
+	model_trainer.py
+
+Today, we'll write the code in .py file and do modular coding and we'll try to connect each and every component all together i.e, 
+data_ingestion.py component to data_transformation.py and that to model_trainer.py
+
+
+Before we get started for today, lets do a quick recap of the previous session...
+
+Pipeline is a connection of a number of steps. One of the steps is Feature Engineering.
+Within FE there are a few steps:
+	(i) Handling missing Values
+	(ii) Handle the outliers
+	(iii) Scale the Values
+	(iv) Encode the Values 
+
+Now, instead of writing a manual code of each and every step, we used scikit-learn.
+Inside scikit-learn there is a class called Pipeline. We created an object of the class Pipeline and in whatever manner that we want to execute all these steps in the Feature Engineering we will do so. 
+
+All those steps of FE we can write inside the Pipeline object and then will be executed in the same order. So yesterday we created the object of pipeline and mentioned if we have some missing values, handle them; if we have categorical data, perform the encoding; if we have to scale the data then do so; this was the pipeline created; now how can we execute the pipeline ?
+
+There's another class named CloumnTransformer. We just need to keep the previously created class Pipeline(along with the data) inside the class ColumnTransformer.
+
+Lets say we have created two pipelines:
+	(i) Categorical Pipeline(where we'll keep the categorical data)
+	(ii) Numerical Pipeline(where we'll keep the numerical data)
+
+When we create the object of the CloumnTransformer(with all the above data and pipeline inside) and then if we perform 'fit_transform' automatically this pipeline will be executed.
+
+
+Now lets get started with the modular coding...
+First we have to activate the environment through bash(if not done so).
+
+As we talked about earlier, we have created several files and folders inside the src folder:
+Inside components we have:
+	data_ingestion.py
+	data_transformation.py
+	model_trainer.py
+
+Similarly inside pipelines we have:
+	__init__.py
+	prediction_pipeline.py
+	training_pipeline.py
+
+Similarly inside utils we have:
+	__init__.py
+
+And for the src folder itself we have:
+	__init__.py
+	exception.py
+	logger.py
+
+And many more files...
+
+As we know that the Jupyter notebook which comes in ipynb file format is just for analysis and experimentation, But we cannot productionize this code i.e, the ipynb file is not for production, just for analysis and experimentation. 
+
+We cannot deploy the Model we've created inside ipynb file format on GCP/Azure/AWS as its not for production i.e, its not productionizable. We can't even write a modular code inside the Jupyter notebook. 
+
+A Modular code is where we segregate a task into different modules. In Python a .py file is called a Module.
+
+Lets get started with components and within that data_ingestion.py
+Rest of the work will be done and notes will be taken from there itself.
+

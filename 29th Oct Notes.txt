@@ -73,3 +73,24 @@ A Modular code is where we segregate a task into different modules. In Python a 
 Lets get started with components and within that data_ingestion.py
 Rest of the work will be done and notes will be taken from there itself.
 
+
+Q. Why is the logger.log file used in a Project ?
+Ans
+A logger file is used for logging each and every information. Lets say we've ingested our data from some csv file at 5:00 pm and I want to log this info.Now I want to transform the data but first from 5pm to 6pm the EDA and FE were done. All this information will be logged. 
+
+
+Q. What is exceptions.py file ? 
+Ans
+Inside the exceptions.py file, we'll create our own custom exception class. For e.g, ZeroDivisionException, ArithmeticException, SyntaxError etc. In Python, we can create our own custom class for Exceptions Handling.
+
+
+Note: Writing the code is not enough, after writing the code we should know how to do its debugging. Lets say we're getting an error while writing a code, then how can/will we get to know what the error is and what type of error it is ? 
+Therefore debugging is very important and exceptions.py will help us in knowing in which line of code we're getting what error.
+
+Q. What is utils file ?
+Ans
+Whether we're doing development in Python or ML or Web Development or any other development project structure(on a low level) we'll find utils.py file also. This is called a helper file/entity/module.
+
+
+Now lets get started with the logger file...
+I am facing some issues with the logger file so lets move on to exceptions.py for now...

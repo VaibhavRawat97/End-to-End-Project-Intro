@@ -94,3 +94,30 @@ Whether we're doing development in Python or ML or Web Development or any other 
 
 Now lets get started with the logger file...
 I am facing some issues with the logger file so lets move on to exceptions.py for now...
+
+Use ChatGPT to understand the scripts inside exceptions.py and logger.py files.
+
+
+Now lets know about the concepts of the 'Artifacts and Configuration' where we're using dataclasses.
+
+
+Whenever we're talking about any component like data_ingestion, data_transformation, model_training.
+The output of data_ingestion is data/raw data, after getting raw data we're two more dataframes i.e, train and test data.
+The output of data_transformation will be systematic data, data ready for model, modified data.
+Q. Will I get a pre-processed object out of data_transformation ?
+Ans. Yes 
+The output of model_training will be the model itself.
+
+All these outputs we'll get out of data_ingestion, data_transformation and model_training will be physical outputs.
+
+In Machine Learning all these physical outputs are called 'Artifacts'. In every ML project and every repository we'll find out an Artifacts folder.
+
+
+The complete component in the data_ingestion.py file with the Artifacts and everything else is finished; Now we'll test it.
+
+Now, where will we collect all the components from data_ingestion, data_transformation and model_training ? 
+
+Ans. In the Pipeline folder. 
+
+We'll use training_pipeline.py to assemble all the components. Lets start coding there...
+

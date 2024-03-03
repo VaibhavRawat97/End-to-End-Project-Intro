@@ -30,4 +30,5 @@ logging.basicConfig(level=logging.INFO,
 )
 
 # The 'format' will show the format of the message.
- 
+if __name__ == '__main__':
+    logging.info("here again i am tesitng")
